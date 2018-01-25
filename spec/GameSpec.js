@@ -23,4 +23,9 @@ describe("Game", function() {
     expect(game.showPins()).toEqual(4);
   });
 
+  it("can store a score from the roll", function() {
+    game.roll(6);
+    expect(game.getScore()).toEqual([6]);
+  });
+
 });
