@@ -9,11 +9,12 @@ Game.prototype.showPins = function() {
   return this.INITIAL_PINS;
 };
 
-Game.prototype.roll = function(number) {
+Game.prototype.throw = function(number) {
   this.INITIAL_PINS -= number;
   this.score.push(number)
+  return number
 };
 
-Game.prototype.getScore = function() {
+Game.prototype.goScore = function() {
   return this.score;
 };

@@ -13,25 +13,25 @@ describe("Game", function() {
   });
 
   it("can throw a roll", function() {
-    game.roll(2);
+    game.throw(2);
     expect(game.showPins()).toEqual(8);
   });
 
-  it("can throw two rolls", function() {
-    game.roll(2);
-    game.roll(4);
+  it("can throw two throws", function() {
+    game.throw(2);
+    game.throw(4);
     expect(game.showPins()).toEqual(4);
   });
 
   it("can store a score from a single roll", function() {
-    game.roll(6);
-    expect(game.getScore()).toEqual([6]);
+    game.throw(6);
+    expect(game.goScore()).toEqual([6]);
   });
 
   it("can store a score from 2 rolls", function() {
-    game.roll(3);
-    game.roll(4);
-    expect(game.getScore()).toEqual([17]);
+    game.throw(3);
+    game.throw(4);
+    expect(game.goScore()).toEqual([3,4]);
   });
 
 });
