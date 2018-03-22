@@ -31,7 +31,7 @@ describe("Game", function() {
   it("can store a score from 2 rolls", function() {
     game.roll(3);
     game.roll(4);
-    expect(game.getScore()).toEqual([7]);
+    expect(game.getScore()).toEqual([17]);
   });
 
 });
