@@ -8,7 +8,7 @@ describe("Game", function() {
     game = new Game;
   });
 
-  it("starts with ten pins to aim at", function() {
+  it("starts with ten pins", function() {
     expect(game.showPins()).toEqual(10);
   });
 
@@ -23,7 +23,7 @@ describe("Game", function() {
     expect(game.showPins()).toEqual(4);
   });
 
-  it("can store a score from the roll", function() {
+  it("can store a score from a single roll", function() {
     game.roll(6);
     expect(game.getScore()).toEqual([6]);
   });
